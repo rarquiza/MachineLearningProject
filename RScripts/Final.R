@@ -8,6 +8,7 @@ table(activity$classe)
 
 # Pre-process
 # Exclude the index, user name, timestamps, and features with mostly NA values
+# Also. create training, testing and validation sets
 activity <- activity[,c(8:11,37:49,60:68,84:86,102,113:124,140,151:159,160)]
 set.seed(1234)
 inBuild <- createDataPartition(y = activity$classe, p=0.7, list=FALSE)

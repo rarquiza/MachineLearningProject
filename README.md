@@ -98,7 +98,7 @@ table(predict(modCART,newdata=testing,type="class"),testing$classe)
 
 ### Random Forest Model
 
-We specify cross-validation in the Random Forest model with k = 5 and repeatitions of 5. It turned out it produces the highest accuracy without overfitting. The accuracy with the training data is 100 percent while the testing data is accurate up to 99 percent.
+We specify cross-validation in the Random Forest model with k = 5 and repetitions of 5. It turned out it produces the highest accuracy without overfitting. The accuracy with the training data is 100 percent while the testing data is accurate up to 99 percent.
 
 <pre>
 # Random Forest
@@ -150,4 +150,4 @@ table(predict(modRF$finalModel,newdata=validation),validation$classe)
 
 ## Conclusion
 
-It is clear that Random Forest model is well-suited and the most accurate model to predict how well particpants perform exercises on the scale A to E (A being the most correct) from accelerometers gathered by HAR group. Its only downside as mentioned previously is intepretability.
+It is clear from the results that Random Forest model is well-suited and the most accurate model without overfitting to predict how well particpants perform exercises on the scale A to E (A being the most correct) from accelerometers gathered by HAR group. Its only downside as mentioned previously is intepretability and a little bit longer run-time.
